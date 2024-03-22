@@ -57,6 +57,9 @@ body {
 .card-content {
     padding: 20px;
 }
+.card-contentad {
+    padding: 10px;
+}
 
 
 .open-button {
