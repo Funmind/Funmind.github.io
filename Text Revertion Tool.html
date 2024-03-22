@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="Welcome to our Text Reversion Tool! Use our online utility to reverse, invert, and flip text easily. Try our reverse text tool to generate mirrored text, flip strings, and convert text backwards.">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Text Reversion Tool</title>
+    <link rel="icon" type="image/png" href="ImagesIndexPage/Funmind.png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin: 20px 0;
+      color: #333;
+    }
+    #container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    #text-input {
+      width: calc(100% - 40px);
+      height: auto;
+      min-height: 150px;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 18px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+    }
+    .action-btn {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #4C3456;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+    .action-btn:hover {
+      background-color: #45a049;
+    }
+    #word-count {
+      text-align: center;
+      margin: 10px auto;
+      color: #666;
+    }
+    .message-container {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(76, 175, 80, 0.9);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      z-index: 999;
+      display: none;
+      animation: slideInDown 0.5s ease;
+    }
+    @keyframes slideInDown {
+      from {
+        top: -50px;
+        opacity: 0;
+      }
+      to {
+        top: 20px;
+        opacity: 1;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      #text-input {
+        min-height: 100px;
+      }
+      .action-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+      }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    h2 {
+      color: #4CAF50;
+      margin-top: 20px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Home Icon -->
+  <a href="index.html" class="home-icon" style="position: fixed; top: 20px; right: 2px;font-size: 20px;">&#127968;</a>
+  <h1>Advanced Text Reversion Tool</h1>
+  <div id="container">
+    
+    <button class="action-btn" id="revert-btn" title="Revert">↩️</button>
+    <button class="action-btn" id="clear-btn" title="Clear">✖️</button>
+    <div id="word-count">Letter Count: 0</div>
+    <textarea id="text-input" placeholder="Enter your text here" rows="4"></textarea>
+  </div><div id="icon-container">
+<button class="action-btn" id="copy-btn" title="Copy">📄</button>
+      <button class="action-btn" id="paste-btn" title="Paste">&#128203;</button>
+<button class="action-btn" id="share-btn" title="Share">📤</button>
+      <button class="action-btn" id="shortcut-btn" title="Shortcut">&#9889;</button>
+    </div>
+  <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+    <h1>Instructions for Using the Advanced Text Reversion Tool</h1>
+    <table>
+      <tr>
+        <th>Action</th>
+        <th>Instructions</th>
+      </tr>
+      <tr>
+        <td>Entering Text</td>
+        <td>Start by navigating to the Advanced Text Reversion Tool webpage. Click or tap on the text area labeled "Enter your text here" to start typing or paste your text.</td>
+      </tr>
+      <tr>
+        <td>Reverting Text</td>
+        <td>To reverse the text you've entered, simply click or tap on the "↩️ Revert Text" button. This button toggles between reverting the text and reverting it back to its original form.</td>
+      </tr>
+      <tr>
+        <td>Clearing Text</td>
+        <td>To clear the text area and start fresh, click or tap on the "Clear Text" button. This will erase all text from the input area.</td>
+      </tr>
+      <tr>
+        <td>Copying Text</td>
+        <td>If you want to copy the text you've entered to your clipboard, click or tap on the "📄 Copy" button. You'll receive a confirmation message at the top of the page indicating that the text has been copied.</td>
+      </tr>
+      <tr>
+        <td>Pasting Text</td>
+        <td>To paste text from your clipboard into the tool, click or tap on the "Paste 📋" button. This will populate the input area with the text from your clipboard.</td>
+      </tr>
+      <tr>
+        <td>Sharing Text</td>
+        <td>If you want to share the text you've entered with others, click or tap on the "Share 📤" button. This will allow you to share the text through various platforms supported by your device.</td>
+      </tr>
+      <tr>
+        <td>Creating Shortcut</td>
+        <td>If you want quick access to the Advanced Text Reversion Tool, you can create a shortcut on your device's home screen. Click or tap on the "⚡ Shortcut" button for instructions on how to do this.</td>
+      </tr>
+      <tr>
+        <td>Word Count</td>
+        <td>As you type or modify the text, the tool automatically displays the letter count at the bottom of the text area, helping you keep track of your input.</td>
+      </tr>
+    </table>
+  </div>
+<div class="message-container" id="message-container"></div>
+
+  <script>
+    var textInput = document.getElementById('text-input');
+    var revertBtn = document.getElementById('revert-btn');
+    var clearBtn = document.getElementById('clear-btn');
+    var wordCount = document.getElementById('word-count');
+    var copyBtn = document.getElementById('copy-btn');
+    var pasteBtn = document.getElementById('paste-btn');
+    var shareBtn = document.getElementById('share-btn');
+    var shortcutBtn = document.getElementById('shortcut-btn');
+    var messageContainer = document.getElementById('message-container');
+
+    revertBtn.addEventListener('click', function() {
+      textInput.value = textInput.value.split('').reverse().join('');
+      updateWordCount();
+    });
+
+    clearBtn.addEventListener('click', function() {
+      textInput.value = '';
+      updateWordCount();
+    });
+
+    textInput.addEventListener('input', function() {
+      updateWordCount();
+    });
+
+    function updateWordCount() {
+      wordCount.textContent = "Letter Count: " + textInput.value.length;
+    }
+
+    copyBtn.addEventListener('click', function() {
+      navigator.clipboard.writeText(textInput.value).then(function() {
+        showMessage('Text copied to clipboard');
+      }).catch(function(err) {
+        console.error('Unable to copy text to clipboard', err);
+      });
+    });
+
+    pasteBtn.addEventListener('click', function() {
+      navigator.clipboard.readText().then(function(text) {
+        textInput.value = text;
+        updateWordCount();
+      }).catch(function(err) {
+        console.error('Failed to read clipboard contents: ', err);
+      });
+    });
+
+    shareBtn.addEventListener('click', function() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Shared Text',
+          text: textInput.value,
+        }).then(function() {
+          console.log('Shared successfully');
+        }).catch(function(error) {
+          console.error('Error sharing:', error);
+        });
+      } else {
+        alert('Sharing not supported in this browser');
+      }
+    });
+
+    shortcutBtn.addEventListener('click', function() {
+      if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+        alert("Your browser doesn't support this feature.");
+      } else {
+        alert('Please use the browser settings/options to add a shortcut to the home screen.');
+      }
+    });
+
+    function showMessage(message) {
+      messageContainer.textContent = message;
+      messageContainer.style.display = 'block';
+      setTimeout(function() {
+        messageContainer.style.display = 'none';
+      }, 5000);
+    }
+  </script>
+  
+</body>
+</html>
