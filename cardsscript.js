@@ -22,7 +22,7 @@ function filterCards() {
         // Show cards containing "ad" in header as suggestions
         cards.forEach(function(card) {
             var cardHeader = card.querySelector('.card-header').textContent.toLowerCase();
-            if (cardHeader.includes('ad')) {
+            if (cardHeader.includes('anad')) {
                 card.style.display = '';
             }
         });
