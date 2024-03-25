@@ -6,17 +6,12 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-   fieldset {
-      border: 2px solid #4CAF50;
-      border-radius: 10px;
-      padding: 10px;
-      margin: 10px auto;
-      max-width: 468px;
-      width: 90%;
-    }
+ 
 body {
- 
- 
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #e0e3eb;
 }
 .container {
