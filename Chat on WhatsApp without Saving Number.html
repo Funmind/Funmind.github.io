@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content=" Chat on WhatsApp without Saving number in your Device.Generate WhatsApp chat links easily with this online tool. Save and manage your WhatsApp contacts. Free and user-friendly WhatsApp link generator.">
-  <meta name="keywords" content="WhatsApp, chat link, generator, WhatsApp number, chat, link, save number, manage contacts, WhatsApp chat, chat on WhatsApp,HackWhatsapp,Without Save Number chat on Whatsapp">
-      <link rel="icon" type="image/png" href="ImagesIndexPage/Funmind.png">
-  <title>Chat On WhatsApp without Saving Number</title>
+  <title>WhatsApp Chat Link Generator</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -97,14 +94,12 @@
   </style>
 </head>
 <body>
-
   <fieldset>
     <img src="your-banner-468x60.jpg" alt="Banner 468x60" style="max-width: 100%; height: auto;">
   </fieldset>
-  <a href="index.html" class="home-icon" style="position: fixed; top: 20px; right: 5px;font-size: 20px;">&#127968;</a>
   <input type="text" id="whatsapp-number" placeholder="Enter WhatsApp Number">
   <button onclick="generateWhatsAppLink()">Chat on WhatsApp</button>
-  <br> <BR>
+  <br>
   <button onclick="saveNumber()">Save Number</button>
   <div class="hide-show-btn" onclick="toggleSavedNumbers()">
     Show Saved Numbers
@@ -128,7 +123,7 @@
       var phoneNumber = document.getElementById('whatsapp-number').value;
       if (phoneNumber) {
         var whatsappLink = 'https://wa.me/' + phoneNumber;
-        window.open(whatsappLink);
+        window.open(whatsappLink, '_blank');
       } else {
         alert('Please enter a valid WhatsApp number.');
       }
