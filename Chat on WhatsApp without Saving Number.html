@@ -98,8 +98,7 @@
     <img src="your-banner-468x60.jpg" alt="Banner 468x60" style="max-width: 100%; height: auto;">
   </fieldset>
   <input type="text" id="whatsapp-number" placeholder="Enter WhatsApp Number">
-  <button onclick="generateWhatsAppLink('whatsapp')">Chat on WhatsApp</button>
-  <button onclick="generateWhatsAppLink('business')">Open with WhatsApp Business</button>
+  <button onclick="generateWhatsAppLink()">Chat on WhatsApp</button>
   <br>
   <button onclick="saveNumber()">Save Number</button>
   <div class="hide-show-btn" onclick="toggleSavedNumbers()">
@@ -120,32 +119,15 @@
   </table>
 
   <script>
-     function generateWhatsAppLink(appType) {
+    function generateWhatsAppLink() {
       var phoneNumber = document.getElementById('whatsapp-number').value;
       if (phoneNumber) {
-        var whatsappLink = 'https://';
-        if (appType === 'business') {
-          whatsappLink += 'api.whatsapp.com/';
-        } else {
-          whatsappLink += 'wa.me/';
-        }
-        whatsappLink += phoneNumber;
-
-        if (navigator.share) {
-          navigator.share({
-            title: 'WhatsApp Chat Link',
-            text: 'Click to chat on WhatsApp',
-            url: whatsappLink
-          }).then(() => console.log('Shared successfully'))
-            .catch((error) => console.error('Error sharing:', error));
-        } else {
-          window.open(whatsappLink, '_blank');
-        }
+        var whatsappLink = 'https://wa.me/' + phoneNumber;
+        window.open(whatsappLink, '_blank');
       } else {
         alert('Please enter a valid WhatsApp number.');
       }
     }
-
 
     function saveNumber() {
       var phoneNumber = document.getElementById('whatsapp-number').value;
