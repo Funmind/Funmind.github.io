@@ -120,7 +120,7 @@
   </table>
 
   <script>
-    function generateWhatsAppLink(appType) {
+     function generateWhatsAppLink(appType) {
       var phoneNumber = document.getElementById('whatsapp-number').value;
       if (phoneNumber) {
         var whatsappLink = 'https://';
@@ -130,11 +130,22 @@
           whatsappLink += 'wa.me/';
         }
         whatsappLink += phoneNumber;
-        window.open(whatsappLink, '_blank');
+
+        if (navigator.share) {
+          navigator.share({
+            title: 'WhatsApp Chat Link',
+            text: 'Click to chat on WhatsApp',
+            url: whatsappLink
+          }).then(() => console.log('Shared successfully'))
+            .catch((error) => console.error('Error sharing:', error));
+        } else {
+          window.open(whatsappLink, '_blank');
+        }
       } else {
         alert('Please enter a valid WhatsApp number.');
       }
     }
+
 
     function saveNumber() {
       var phoneNumber = document.getElementById('whatsapp-number').value;
