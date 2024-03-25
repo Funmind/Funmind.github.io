@@ -95,22 +95,12 @@
 </head>
 <body>
   <fieldset>
-    <script type="text/javascript">
-	atOptions = {
-		'key' : '0da5344b1f2b74238231ac1758c80c4e',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/0da5344b1f2b74238231ac1758c80c4e/invoke.js"></scr' + 'ipt>');
-</script>
-    
+    <img src="your-banner-468x60.jpg" alt="Banner 468x60" style="max-width: 100%; height: auto;">
   </fieldset>
   <input type="text" id="whatsapp-number" placeholder="Enter WhatsApp Number">
-  <button onclick="generateWhatsAppLink()">Chat on WhatsApp</button>
+  <button onclick="generateWhatsAppLink('whatsapp')">Chat on WhatsApp</button>
+  <button onclick="generateWhatsAppLink('business')">Open with WhatsApp Business</button>
   <br>
-	<br>
   <button onclick="saveNumber()">Save Number</button>
   <div class="hide-show-btn" onclick="toggleSavedNumbers()">
     Show Saved Numbers
@@ -128,21 +118,18 @@
     <tbody>
     </tbody>
   </table>
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'efae4319de6967718f6d6ffb42137787',
-		'format' : 'iframe',
-		'height' : 300,
-		'width' : 160,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/efae4319de6967718f6d6ffb42137787/invoke.js"></scr' + 'ipt>');
-</script>
+
   <script>
-    function generateWhatsAppLink() {
+    function generateWhatsAppLink(appType) {
       var phoneNumber = document.getElementById('whatsapp-number').value;
       if (phoneNumber) {
-        var whatsappLink = 'https://wa.me/' + phoneNumber;
+        var whatsappLink = 'https://';
+        if (appType === 'business') {
+          whatsappLink += 'api.whatsapp.com/';
+        } else {
+          whatsappLink += 'wa.me/';
+        }
+        whatsappLink += phoneNumber;
         window.open(whatsappLink, '_blank');
       } else {
         alert('Please enter a valid WhatsApp number.');
