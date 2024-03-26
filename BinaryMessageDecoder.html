@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Binary Message Decoder</title>
+    <meta charset="UTF-8" />
+	 <meta name="description" content="Decode binary messages effortlessly with our online binary message decoder tool. Convert binary code to text instantly and unveil hidden messages with ease.">
+  <meta name="keywords" content="Binary message decoder, Binary to text converter, Binary translator, Binary decoder online, Convert binary to text, Decode binary messages, Binary code translator, Binary converter tool, Decode binary to ASCII, Binary text decoder">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/png" href="ImagesIndexPage/Funmind.png">
+
+	<style>
+	* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; /* for Safari */
+  -moz-box-sizing: border-box; /* for Firefox */
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #F1F1F9;
+}
+
+/* CSS grid layout */
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 50px 1fr 40px;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer"
+}
+
+/* CSS grid elements */
+header {
+  background-color: #000;
+  grid-area: header;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 2px 10px;
+  font-size: 1em;
+  color: #FFF;
+}
+
+#header-logo {
+  height: 3vw;
+  width: 3vw;
+  margin-right: 10px;
+}
+
+form {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://toppng.com/uploads/preview/binary-code-code-numbers-green-glow-11569783618iniftegu8q.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+form h1 {
+  margin-bottom: 1em;
+  font-size: 2.75em;
+}
+
+form input {
+  background-color: #F1F1F9;
+  margin: 1.5em auto;
+  width: 18em;
+  height: 3em;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+form #submit {
+  background-color: #5CA641;
+  opacity: 0.9;
+  color: #F1F1F9;
+  cursor: pointer;
+}
+
+form #submit:hover {
+  background-color: #FD3535;
+  opacity: 0.9;
+  color: #F1F1F9;
+}
+
+form p {
+  margin: 1.5em auto;
+  font-size: 1.25em;
+}
+
+form a {
+  margin: 1.5em auto;
+  font-size: 1em;
+  font-style: italic;
+  color: #5CA641;
+  opacity: 0.9;
+  transition: transform 0.5s ease-in-out;
+}
+
+form a:hover {
+  color: #FD3536;
+  transform: translateY(0.5rem);
+}
+
+footer {
+  background-color: #000;
+  grid-area: footer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2px 10px;
+  font-size: 0.75em;
+  font-style: italic;
+  color: #FFF;
+}
+	</style>
+  </head>
+  <body>
+     <a href="index.html" class="home-icon" style="position: fixed; top: 25px; right: 5px;font-size: 20px;">&#127968;</a>
+
+    <div class="grid-container">
+      <header>
+        <img id="header-logo"
+           src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png"
+           alt="JavaScript logo"
+        />
+        <p>Binary Message Decoder</p>
+      </header>
+
+      <form>
+        <h1>Binary Message Decoder</h1>
+        <input
+               type="text"
+               placeholder="Enter a binary message"
+               id="binary-message"
+        />
+        <input
+               type="submit"
+               id="submit"
+               value="Decode"
+        />
+        <p id="decoded-message"></p>
+
+      </form>
+
+      <footer>
+	    <p>© Developed by Jahangir jaffar
+	  <script type="text/javascript">
+	atOptions = {
+		'key' : '0da5344b1f2b74238231ac1758c80c4e',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/0da5344b1f2b74238231ac1758c80c4e/invoke.js"></scr' + 'ipt>');
+</script>
+      
+      </footer>
+    </div>
+
+    <script>
+	// function for decode the message:
+function binaryTranslator(str) {
+  let translatedMessage = '';
+
+  str.split(' ').forEach(binaryTranslator => {
+    let numericCharacterRepresentation = parseInt(binaryTranslator, 2);
+    let letter = String.fromCharCode(numericCharacterRepresentation);
+    translatedMessage += letter;
+  })
+  return translatedMessage;
+}
+
+
+// Get binary message and decode it using 'binaryTranslator()' function:
+function enteredMessage(event) {
+event.preventDefault();
+var binaryMessage = document.getElementById('binary-message').value;
+var decode = binaryTranslator(binaryMessage);
+document.getElementById('decoded-message').innerHTML = decode;
+}
+
+var btn = document.getElementById('submit');
+btn.addEventListener('click', enteredMessage);
+	
+	</script>
+	<script type='text/javascript' src='//pl22855000.profitablegatecpm.com/d3/a4/11/d3a4113acebcd055facf8e7f051768bb.js'></script>
+  </body>
+</html>
